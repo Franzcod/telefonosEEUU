@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Comprobar numero</title>
+    <script>
+        function telephoneCheck() {
+            let texto;
+            var caca = document.getElementById("campo").value;
+            let expresionRegular=/^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+            if (expresionRegular.test(caca)) {
+              texto="EL FORMATO DEL NUMERO ES CORRECTO" ;
+            }
+            else{
+              texto="EL FORMATO NO CORRESPONDE A UN TELEFONO DE EE.UU" ; 
+              document.getElementById("campo").value = "" ; 
+            }
+            document.getElementById("demo").innerHTML = texto;
+          }
+    
+    </script>
+
+     <!--Estilo-->
+    <link rel="stylesheet" type="text/css" href="estiloAmericano.css">
+
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+     <!--iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+
+
+</head>
+<body>
+    <div class="imagen-top">
+        <img src="usa.png">
+        <img src="tel.png">
+    </div>
+
+    <div class="contenedor">
+        <h1>Telefono Americano</h1>
+        <h3>Coloca el numero en el campo de texto para confirmar que el formato corresponde a un numero de telefono Americano</h3>
+
+        <div>
+            <input class="campo" id="campo" type="text">
+            <p></p>
+            <button class="boton1" onclick="telephoneCheck()">Boton</button>
+            <br>
+
+            <p class="resultado"  id="demo"></p>
+            <br>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <footer>
+          <p>
+            &copy; Created for
+            <a href="https://franzcod.github.io/MyPerfil/" target="_blank">Palacios Francisco <i class="fab fa-gripfire"></i></i></a>
+          </p>
+        </footer>
+    </div>
+
+
+</body>
+
